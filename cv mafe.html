@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículum - María Fernanda De la Rosa Dimas</title>
+
+  <style>
+    /* ====== ESTILOS BASE ====== */
+    :root {
+      --rosa: #e91e63;
+      --rosa-claro: #fce4ec;
+      --gris: #555;
+      --blanco: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--blanco);
+      color: var(--gris);
+      overflow-x: hidden;
+    }
+
+    /* ====== SECCIÓN PRINCIPAL (HERO) ====== */
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      /* 👇 Cambia esta línea para usar una imagen local */
+      background-image: url("fondo.jpg");
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(233, 30, 99, 0.4);
+    }
+
+    header h1, header p, header img {
+      position: relative;
+      z-index: 1;
+    }
+
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    header h1 {
+      color: var(--blanco);
+      font-size: 36px;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    header p {
+      color: var(--blanco);
+      font-size: 18px;
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.4s ease-out forwards;
+    }
+
+    /* ====== CONTENIDO ====== */
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      font-size: 24px;
+      color: var(--rosa);
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: var(--rosa);
+      display: block;
+      margin-top: 5px;
+    }
+
+    p, li {
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background-color: var(--rosa);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 25px;
+      font-size: 14px;
+      margin: 5px 5px 0 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: var(--rosa-claro);
+      color: #444;
+      font-size: 14px;
+    }
+
+    /* ====== ANIMACIONES ====== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 768px) {
+      header {
+        height: 80vh;
+      }
+      header h1 {
+        font-size: 26px;
+      }
+      header img {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== ENCABEZADO CON IMAGEN ====== -->
+  <header>
+    <!-- 👇 Cambia “foto.jpg” por tu imagen del escritorio -->
+    <img src="foto.jpg" alt="Foto de María Fernanda De la Rosa Dimas">
+    <h1>María Fernanda De la Rosa Dimas</h1>
+    <p>17 años · Aprendiz en sistemas</p>
+  </header>
+
+  <!-- ====== CUERPO ====== -->
+  <main>
+    <section>
+      <h2>Perfil Profesional</h2>
+      <p>Estudiante apasionada por la tecnología y el aprendizaje continuo. Con conocimientos en desarrollo web, redes y mantenimiento de equipos. Busco desarrollar mis habilidades y formar parte de proyectos innovadores.</p>
+    </section>
+
+    <section>
+      <h2>Experiencia Escolar</h2>
+      <ul>
+        <li><strong>Proyecto:</strong> Creación de página web para tienda escolar (HTML, CSS).</li>
+        <li><strong>Soporte técnico:</strong> Mantenimiento e instalación de software en el laboratorio de cómputo.</li>
+        <li><strong>Colaboración:</strong> Trabajo en equipo en proyectos de programación y diseño.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Educación</h2>
+      <ul>
+        <li><strong>Preparatoria (actual):</strong> Especialidad en informática.</li>
+        <li><strong>Cursos:</strong> HTML y CSS básico, Mantenimiento de PC, Redes locales.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Javascript (básico)</span>
+        <span>Ofimática</span>
+        <span>Trabajo en equipo</span>
+        <span>Comunicación</span>
+        <span>Responsabilidad</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Español — Nativo</li>
+        <li>Inglés — Básico</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Referencias</h2>
+      <p>Prof. Carlos Durán — Profesor de sistemas</p>
+    </section>
+
+    <section>
+      <h2>Logros</h2>
+      <ul>
+        <li>Participación destacada en feria de ciencias escolar.</li>
+        <li>Reconocimiento por desempeño académico en materias tecnológicas.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Currículum creado por María Fernanda De la Rosa Dimas · Noviembre 2025
+  </footer>
+
+  <script>
+    // ====== EFECTO SCROLL (REVELAR SECCIONES) ======
+    const secciones = document.querySelectorAll('section');
+    const mostrarAlScroll = () => {
+      const trigger = window.innerHeight * 0.85;
+      secciones.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < trigger) sec.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', mostrarAlScroll);
+    mostrarAlScroll();
+  </script>
+
+</body>
+</html>
